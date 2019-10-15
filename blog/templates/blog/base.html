@@ -7,18 +7,11 @@
         <title>Django Girls blog</title>
     </head>
     <body>
-        <div>
+        <div class="page-header">
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             <h1><a href="/">My Django Blog</a></h1>
         </div>
-        <table border="1px">
-            <caption>Все посты</caption>
-            <tr>
-                <th>Название</th>
-                <th>Текст</th>
-                <th>Дата публикации</th>
-            </tr>
         {% block content %}
         {% endblock %}
-        </table>
     </body>
 </html>
